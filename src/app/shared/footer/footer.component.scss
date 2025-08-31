@@ -1,0 +1,28 @@
+@import './../../../styles.scss';
+
+section{
+    @include dFlex($fd: row, $jc: space-between);
+    background-color: $ulka_green;
+    height: 148px;
+    padding: 0px 24px 0px 24px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.logo-area{
+    width: 132px;
+
+    .soloLogo{
+        border-radius: 10px;
+    }
+}
+
+.link-section{
+    @include dFlex($ai: end);
+
+    .footerLink{
+        font-size: 28px;
+        color: white;
+    }
+}

@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@mixin dFlex($dp: flex, $fd: column, $jc: center, $ai: center) {
+    display: $dp;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+*{
+    margin: 0;
+}
+
+$ulka_green: rgb(53, 103, 53);
