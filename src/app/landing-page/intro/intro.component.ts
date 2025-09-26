@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { log } from 'console';
+import { listenerCount } from 'process';
+import { initZone } from 'zone.js/lib/zone-impl';
 
 @Component({
   selector: 'app-intro',
@@ -9,25 +12,46 @@ import { log } from 'console';
   styleUrl: './intro.component.scss'
 })
 export class IntroComponent implements OnInit {
+  
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit(): void {
-      setTimeout(() => {
-        console.log('Animation läuft');
-        this.introAnimation();
-      }, 1500);
+    if(isPlatformBrowser(this.platformId)) {
+      this.introAnimation();
+    } 
   }
 
   introAnimation() {
-    let logo = document.querySelector('.intro-logo-space');
-    logo?.classList.add('moveUp');
-    this.getRid();
+    setTimeout(() => {
+      this.moveUp();
+      this.addMargin();
+      this.getRid();
+    },1500);
+  }
+
+  moveUp() {
+    let animatedLogo = document.querySelector('.animated-logo');
+    animatedLogo?.classList.add('moveUp');
+    this.clearBackgrnd();
+  }
+
+  clearBackgrnd() {
+    let logoContainer = document.querySelector('.logo-container');
+    setTimeout(() => {
+      logoContainer?.classList.add('container-transperent');
+    }, 2000);
+  }
+
+  addMargin() {
+    let logo = document.querySelector('.solo-logo');
+    logo?.classList.add('addMargin');
   }
 
   getRid() {
+    let logoContainer = document.querySelector('.logo-container');
     setTimeout(() => {
-        let intro = document.querySelector('.intro');
-        intro?.classList.add('getRid');
-    }, 4000);
+      logoContainer?.classList.add('getRid');
+    }, 3000);
   }
 
 }

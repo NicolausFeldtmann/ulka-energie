@@ -1,0 +1,27 @@
+@import './../../../styles.scss';
+
+section{
+    background-color: $ulka_green;
+    height: 100%;
+}
+
+nav{
+    @include dFlex($ai: unset);
+    height: 100%;
+}
+
+a{
+    font-size: 28px;
+    margin: 12px 12px 12px 0px;
+    padding: 0px 12px 0px 12px;
+    width: 80%;
+    color: white;
+
+    &:hover{
+        color: $ulka_green;
+        background-color: white;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        cursor: pointer;
+    }
+}

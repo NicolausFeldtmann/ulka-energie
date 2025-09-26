@@ -6,8 +6,10 @@ section{
     height: 148px;
     padding: 0px 24px 0px 24px;
     width: 100%;
-    position: absolute;
     bottom: 0;
+    box-shadow: 0px -17px 17px 9px rgba(0, 0, 0, 0.26);
+    position: relative;
+    z-index: 5;
 }
 
 .logo-area{

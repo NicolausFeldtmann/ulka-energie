@@ -1,0 +1,58 @@
+@import './../../styles.scss';
+
+section{
+    @include dFlex($fd: row);
+    background-size: cover;
+    height: 100%;
+}
+
+.landing-content{
+    @include dFlex();
+    width: 75%;
+    height: 100%;
+    background-image: url(./../../assets/img/startImage.png); 
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+}
+
+.txt-field{
+    @include dFlex();
+    background-color: white;
+    border-radius: 10px;
+    margin: 480px 48px 0px 48px;
+    padding: 0px 12px 0px 12px;
+    box-shadow:-12px 12px 16px 1px rgba(0, 0, 0, 0.5);
+}
+
+.txt-area1{
+    h3{
+        font-size: 36px;
+    }
+
+    p{
+        font-size: 24px;
+        margin: 0px 0px 24px 0px;
+    }
+}
+
+.txt-area2{
+
+    p{
+        font-size: 18px;
+    }
+}
+
+.img-area{
+    @include dFlex();
+    width: 300px;
+
+    .landing-img{
+        width: 288px;
+    }
+}
+
+.aside{
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
