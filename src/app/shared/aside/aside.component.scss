@@ -3,18 +3,21 @@
 section{
     background-color: $ulka_green;
     height: 100%;
+    width: 324px;
 }
 
 nav{
-    @include dFlex($ai: unset);
+    @include dFlex($ai: unset, $jc: unset);
     height: 100%;
 }
 
 a{
-    font-size: 28px;
+    @include dFlex($ai: unset);
+    font-size: 26px;
     margin: 12px 12px 12px 0px;
     padding: 0px 12px 0px 12px;
-    width: 80%;
+    width: 95%;
+    height: 56px;
     color: white;
 
     &:hover{

@@ -8,7 +8,7 @@ section{
 
 .landing-content{
     @include dFlex();
-    width: 75%;
+    width: 100%;
     height: 100%;
     background-image: url(./../../assets/img/startImage.png); 
     background-repeat: no-repeat;
@@ -17,11 +17,15 @@ section{
 
 .txt-field{
     @include dFlex();
-    background-color: white;
-    border-radius: 10px;
     margin: 480px 48px 0px 48px;
-    padding: 0px 12px 0px 12px;
-    box-shadow:-12px 12px 16px 1px rgba(0, 0, 0, 0.5);
+
+    .txt{
+        background-color: white;
+        border-radius: 10px;
+        width: 55%;
+        box-shadow:-12px 12px 16px 1px rgba(0, 0, 0, 0.5);
+        padding: 0px 12px 0px 12px;
+    }
 }
 
 .txt-area1{
